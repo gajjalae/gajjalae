@@ -1,0 +1,7 @@
+  mat-grid-tile {
+    background: lightblue;
+  }
+  .sub-card{
+    width: 150px;
+    display: inline-flex;
+  }

@@ -1,0 +1,21 @@
+<div style="text-align:center">
+    <h1>
+      {{ title }} !
+    </h1>
+</div>
+
+<mat-card class="example-card main-card">
+    <mat-card-header>
+        <mat-card-title><strong>Country & Year:</strong> USA 2015</mat-card-title>
+        <mat-card-subtitle><strong>Holidays List</strong></mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-card class="card-over" *ngFor="let key of keys" (click)="navigateToDetails(key)">
+            <strong>Date: {{key}}</strong>
+            <mat-card *ngFor="let holiday of holidayList[key]">
+                <p>{{holiday.name}}</p>
+            </mat-card>
+        </mat-card>
+    </mat-card-content>
+</mat-card>

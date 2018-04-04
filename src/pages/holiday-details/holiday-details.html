@@ -1,0 +1,18 @@
+<div style="text-align:center">
+    <h1>
+      {{ title }}
+    </h1>
+</div>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let details of holidayData" class="panel-extn">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <strong>Holiday</strong> : {{details.name}}
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <img mat-card-image src="assets/images/IMG_107455.jpg" class="img-cls" alt="Photo of a Shiba Inu">
+        <p><strong>Holiday Date</strong>: {{details.date}}</p>
+        <p><strong>Observed Date</strong>: {{details.observed}}</p>
+        <p><strong>Public Holiday Day</strong>: {{details.public? 'Yes': 'No'}}</p>
+    </mat-expansion-panel>
+</mat-accordion>
